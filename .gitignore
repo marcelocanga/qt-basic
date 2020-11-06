@@ -22,7 +22,7 @@
 # Editor temp/backup files
 *~
 #builds
-/build
+/cmakeBuild
 /cros_64
 /mac_64
 /msys
