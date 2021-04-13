@@ -1,0 +1,26 @@
+[
+  {
+    "name": "linux",
+    "cmakeSettings": {
+      "CMAKE_CXX_STANDARD": "17",
+      "U_ARCH": "linux"
+    },
+    "toolchainFile": "toolchain.txt"
+  },
+  {
+    "name": "cros_64",
+    "cmakeSettings": {
+      "CMAKE_CXX_STANDARD": "17",
+      "U_ARCH": "cros_64"
+    },
+    "toolchainFile": "toolchain.txt"
+  },
+  {
+    "name": "mac_64",
+    "cmakeSettings": {
+      "CMAKE_CXX_STANDARD": "17",
+      "U_ARCH": "mac_64"
+    },
+    "toolchainFile": "toolchain.txt"
+  }
+]

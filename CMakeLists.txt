@@ -27,6 +27,21 @@ if( ${U_ARCH} MATCHES  cros_64 )
  MESSAGE("CMAKE_Fortran_COMPILER  ${CMAKE_Fortran_COMPILER}")
 
 endif()
+#.............................................      linux
+#
+
+if(${U_ARCH} MATCHES  linux )
+
+ include_directories ( src/inc )
+
+ find_library(GLPK_LIB      NAMES libglpk.a   HINTS  lib/linux  )
+ find_library(BLAS_LIB      NAMES blas        HINTS /usr/lib )
+ find_library(LAPACK_LIB    NAMES lapack      HINTS /usr/lib )
+ find_library(READLINE_LIB  NAMES readline    HINTS /usr/lib )
+
+ MESSAGE("the GLPK library ${GLPK_LIB}")
+ 
+endif()
 #.............................................      macos
 #
 

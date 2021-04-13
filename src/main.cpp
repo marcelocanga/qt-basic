@@ -6,11 +6,11 @@ extern "C"{
   int test2_();
 }
 
-extern "C"{
+extern "C"
+{
 #include "Blas.h"
 #include "Lapack.h"
 }
-
 
 int main(int argc, char *argv[])
 {

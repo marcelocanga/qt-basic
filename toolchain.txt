@@ -29,6 +29,24 @@ if( ${U_ARCH} MATCHES  cros_64 )
  set(CMAKE_Fortran_FLAGS  "-m64 -Dcros_64 -pipe -fPIC  -fexceptions -cpp  -Walign-commons -Wunused-dummy-argument ${type_FLAGS}" )
 
 endif()
+#.............................................      linux
+#
+
+if(${U_ARCH} MATCHES  linux )
+
+ list(APPEND CMAKE_PREFIX_PATH "/fe/Qt/5.7/clang_64")
+ list(APPEND CMAKE_PREFIX_PATH "/usr/bin")
+ 
+ set(CMAKE_Fortran_COMPILER_WORKS 1)       
+
+ set(CMAKE_Fortran_COMPILER     /usr/bin/gfortran       CACHE STRING "" FORCE )
+ set(CMAKE_C_COMPILER           /usr/bin/gcc          	CACHE STRING "" FORCE ) 
+ set(CMAKE_CXX_COMPILER         /usr/bin/g++        	CACHE STRING "" FORCE )
+
+
+set(CMAKE_Fortran_FLAGS  "-m64 -Dmac_64 -pipe -fPIC  -fexceptions -cpp  -Walign-commons -Wunused-dummy-argument ${type_FLAGS}" )
+
+endif()
 #.............................................      macos
 #
 
